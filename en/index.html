@@ -1,10 +1,113 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Public Edge provides region-aware, capacity-aware and observable delivery for Kubernetes."><title>Public Edge — Region-aware Kubernetes delivery</title><link rel="stylesheet" href="../styles.css"></head>
-<body><header><a class="brand" href="../">Public Edge</a><nav><a href="#platform">Platform</a><a href="#scenarios">Scenarios</a><a href="https://github.com/orgs/public-edge/projects">Roadmap</a><a href="../zh-CN/" lang="zh-CN">中文</a></nav></header>
-<main>
-  <section class="hero"><p class="kicker">REGION-AWARE · CAPACITY-AWARE · EVIDENCE-DRIVEN</p><h1>Route public delivery by health, not hope.</h1><p class="lead">Public Edge turns regional capacity and externally observed health into reviewable Kubernetes delivery decisions, with focused operator views for every layer.</p><div class="actions"><a class="primary" href="#platform">Explore the platform</a><a href="https://github.com/public-edge/public-edge-manager">View PublicEdgeManager</a></div></section>
-  <section id="platform" class="stack"><article><p class="index">01 / AUTHORITY</p><h2>PublicEdgeManager</h2><p>Evaluates region, capacity and health evidence to publish a stable desired view for Kubernetes delivery.</p></article><article><p class="index">02 / EGRESS</p><h2>Mihomos Cluster</h2><p>Coordinates healthy global and regional exit providers while keeping consumer policy explicit.</p></article><article><p class="index">03 / INSPECTION</p><h2>Headlamp plugins</h2><p>Show topology and health as read-only operational evidence without becoming the source of truth.</p></article></section>
-  <section id="scenarios" class="scenarios"><div><p class="kicker">THREE OPERATING QUESTIONS</p><h2>Where should traffic go now?</h2></div><div class="scenario-grid"><article><h3>Regional delivery</h3><p>Select a viable region from declared policy and current evidence.</p></article><article><h3>Healthy exits</h3><p>Prefer providers that meet health and capacity gates, with explicit fallbacks.</p></article><article><h3>Operator evidence</h3><p>Inspect decisions and readiness without exposing private management topology.</p></article></div></section>
-  <section class="guardrail"><p class="kicker">PUBLIC BY DESIGN</p><h2>Show capability. Protect infrastructure.</h2><p>The public site and roadmap contain product contracts, sanitized diagrams and reviewed evidence only. Internal addresses, routing tables, tenants, credentials and raw telemetry remain in their systems of record.</p></section>
-  <section class="callout"><p class="kicker">PUBLIC ROADMAP</p><h2>Follow the next edge outcomes.</h2><p>Track product, website, documentation, launch and reliability initiatives through public GitHub Issues.</p><a class="primary button" href="https://github.com/orgs/public-edge/projects">View the roadmap</a></section>
-</main><footer><span>Public Edge</span><span>Desired state in Git · runtime authority in Kubernetes</span><a href="https://github.com/public-edge">GitHub</a></footer></body></html>
+<html lang="en" data-site="public-edge">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Public Edge — Health-aware public ingress for Kubernetes</title>
+    <meta name="description" content="Public Edge Manager turns Kubernetes, Gateway, network-path and probe evidence into deterministic DNS answers for the healthy regional edge.">
+    <meta name="theme-color" content="#f7f9fc">
+    <meta property="og:title" content="Public Edge — Health-aware public ingress for Kubernetes">
+    <meta property="og:description" content="Public Edge Manager turns Kubernetes, Gateway, network-path and probe evidence into deterministic DNS answers for the healthy regional edge.">
+    <meta property="og:url" content="https://public-edge.github.io/website/en/">
+    <link rel="canonical" href="https://public-edge.github.io/website/en/">
+    <link rel="alternate" hreflang="en" href="https://public-edge.github.io/website/en/">
+    <link rel="alternate" hreflang="zh-CN" href="https://public-edge.github.io/website/zh-CN/">
+    <link rel="alternate" hreflang="x-default" href="https://public-edge.github.io/website/en/">
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="https://public-edge.github.io/website/sitemap.xml">
+    <link rel="icon" type="image/svg+xml" href="../mark.svg">
+    <link rel="stylesheet" href="../styles.css?v=20261023-oss-1">
+    <link rel="stylesheet" href="https://brand-assets.re8ch.com/dist/current/re8ch-navigator.css">
+    <link rel="stylesheet" href="https://brand-assets.re8ch.com/dist/current/re8ch-footer.css">
+    <script src="../boot.js?v=20261023-oss-1"></script>
+    <script src="https://brand-assets.re8ch.com/dist/current/re8ch-navigator.js" defer></script>
+    <script src="https://brand-assets.re8ch.com/dist/current/re8ch-footer.js" defer></script>
+    <script src="../site.js?v=20261023-oss-1" defer></script>
+  </head>
+  <body>
+    <div class="shell">
+    <re8ch-navigator product="public-edge" brand="Public Edge" locale="en" home-href="../en/" links='[{"label":"Selector","href":"../en/#selector"},{"label":"Components","href":"../en/#components"},{"label":"Boundaries","href":"../en/#boundaries"},{"label":"Install","href":"../en/#install"}]' language-options='[{"label":"English","value":"en","href":"../en/"},{"label":"简体中文","value":"zh-CN","href":"../zh-CN/"}]' language-mode="available" extra-actions='[]'></re8ch-navigator>
+    <main>
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div>
+            <p class="eyebrow">Public Edge <span class="tag">Open source · Kubernetes + DNS</span></p>
+            <h1>Route public traffic by health, not hope.</h1>
+            <p class="lead">Kubernetes can expose workloads, but it does not decide which regional edge is reachable, has capacity and is healthy right now. Public Edge Manager turns that evidence into deterministic DNS answers and auditable PublicEdge status.</p>
+            <div class="actions"><a class="button primary" href="https://github.com/public-edge/public-edge-manager#quick-start" rel="noopener">Quick start</a><a class="button" href="https://github.com/public-edge/public-edge-manager" rel="noopener">Explore the code</a></div>
+            <div class="stats"><div><span>Authoritative DNS</span><strong data-stat="dns">UDP+TCP</strong></div><div><span>Helm chart</span><strong data-stat="chart">0.8.4</strong></div><div><span>Publishes by default</span><strong data-stat="default">Off</strong></div><div><span>Releases</span><strong data-stat="artifacts">Signed</strong></div></div>
+          </div>
+          <div class="figure" id="selector" data-edge>
+            <div class="figure-head"><b>Edge selector</b><small>Click an edge to change its evidence.</small></div>
+            <div class="figure-body"><svg viewBox="0 0 600 350" role="group" aria-label="Edge selector"></svg></div>
+            <div class="figure-foot">
+              <div class="verdict" data-edge-verdict aria-live="polite"></div>
+              <div class="mono-pane lines" data-edge-pane></div>
+              <small class="fig-note">A model of the selection rules. Names and domains are placeholders.</small>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="components">
+        <div class="wrap">
+          <div class="section-head"><p class="eyebrow">Components</p><h2>One authority, one egress fabric, read-only views.</h2><p>Each part has one job. The decision lives in Kubernetes status, and the views never become the source of truth.</p></div>
+          <div class="rows">
+            <article class="row"><span class="idx">01</span><h3>PublicEdgeManager</h3><p>Kubernetes controller and authoritative DNS. Discovers candidates from Kubernetes facts, excludes stale, unreachable or unready ones, and selects by locality, capacity and priority.</p><a href="https://github.com/public-edge/public-edge-manager" rel="noopener">public-edge-manager →</a></article>
+            <article class="row"><span class="idx">02</span><h3>Mihomos Cluster</h3><p>Egress fabric. Every labelled node consumes a node-local proxy; Ready-only providers offer healthy regional and global exits next to Cilium routing.</p><a href="https://github.com/public-edge/mihomos-cluster" rel="noopener">mihomos-cluster →</a></article>
+            <article class="row"><span class="idx">03</span><h3>Headlamp plugins</h3><p>Show edge topology, exits and health as read-only operational evidence.</p><a href="https://github.com/public-edge/headlamp-public-edge" rel="noopener">headlamp-public-edge →</a></article>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="boundaries">
+        <div class="wrap">
+          <div class="section-head"><p class="eyebrow">Boundaries</p><h2>It chooses the edge. It does not run the network.</h2><p>Public Edge Manager is application- and DNS-provider-agnostic. Optional integrations add evidence or publication; none of them is required.</p></div>
+          <div class="split"><div class="panel"><h3>Public Edge Manager does</h3><ul><li><b>Candidate discovery</b> · from Nodes, Gateways and Services, not a private inventory</li><li><b>Exclusion on evidence</b> · stale, unreachable or unready candidates never publish</li><li><b>Controlled failover</b> · last-known-good through short probe failures</li><li><b>Authoritative DNS</b> · delegated zone over UDP and TCP</li></ul></div><div class="panel other"><h3>It never configures</h3><ul><li><b>Routers, NAT and BGP</b> · owned by their existing operators</li><li><b>Certificates and app routes</b> · owned by their controllers</li><li><b>DNS provider credentials</b> · ExternalDNS writes to PowerDNS; the credential stays there</li><li><b>Path evidence</b> · read from AdvFab NetworkPathAssessment resources</li></ul></div></div>
+        </div>
+      </section>
+      <section class="section" id="install">
+        <div class="wrap install">
+          <div>
+            <div class="section-head"><p class="eyebrow">Install</p><h2>Nothing is published until the evidence is there.</h2><p>The chart defaults to enabled: false. An edge is only published once the service directory, nameserver fallback and readiness evidence are configured.</p></div>
+            <ol class="steps"><li>Copy the example values and replace every documentation address and domain.</li><li>Install the signed OCI chart.</li><li>Register a service and inspect the derived status from the least-privilege CLI pod.</li></ol>
+            <div class="actions"><a class="button" href="https://github.com/public-edge/public-edge-manager/blob/main/docs/CLI.md" rel="noopener">CLI guide →</a></div>
+          </div>
+          <div class="code">
+            <div class="code-head"><span>install.sh</span><button class="copy" type="button" data-copy-target="code-public-edge" data-copied="Copied">Copy</button></div>
+            <pre id="code-public-edge">helm install public-edge-manager \
+  oci://ghcr.io/public-edge/charts/public-edge-manager \
+  --version 0.8.4 \
+  --namespace public-edge-system --create-namespace \
+  --values values-production.yaml
+
+<span class="c"># Register a service, then inspect</span>
+kubectl -n public-edge-system exec deploy/public-edge-manager-cli -- \
+  edgectl service-register app.example.com \
+  --service app --class web --probe-path /healthz
+kubectl -n public-edge-system exec deploy/public-edge-manager-cli -- \
+  edgectl status</pre>
+          </div>
+        </div>
+      </section>
+      <section class="section" id="family">
+        <div class="wrap">
+          <div class="section-head"><p class="eyebrow">Open-source cloud family</p><h2>Three contracts that compose.</h2><p>AdvFab produces path evidence, Public Edge consumes it to answer DNS, and Among Clusters connects clusters without sharing their keys. RE8CH Cloud runs all three as a managed service.</p></div>
+          <div class="family">
+            <a href="https://advfab.org/"><span class="fam-mark"><img src="../marks/advfab.svg" alt="" width="26" height="26"><b>AdvFab</b></span><p>Network evidence controller for Kubernetes.</p><small>Open source</small></a>
+            <a href="https://public-edge.github.io/website/en/" aria-current="page"><span class="fam-mark"><img src="../marks/public-edge.svg" alt="" width="26" height="26"><b>Public Edge</b></span><p>Health-aware public ingress and authoritative DNS.</p><small>Open source</small></a>
+            <a href="https://among-clusters.github.io/website/en/"><span class="fam-mark"><img src="../marks/among-clusters.svg" alt="" width="26" height="26"><b>Among Clusters</b></span><p>Sovereign cluster peering for BYOC services.</p><small>Open source</small></a>
+            <a href="https://cluster.re8ch.com/en/"><span class="fam-mark"><img src="https://brand-assets.re8ch.com/PRODUCTS/cluster/SVG/icon-no-edge.svg" alt="" width="26" height="26"><b>RE8CH Cloud</b></span><p>The managed cluster network built on these projects.</p><small>Managed</small></a>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap closing">
+          <div class="section-head"><h2>Show capability. Protect infrastructure.</h2><p>The site and roadmap contain product contracts, sanitized diagrams and reviewed evidence only. Internal addresses, routing tables, tenants, credentials and raw telemetry stay in their systems of record.</p></div>
+          <div class="actions"><a class="button primary" href="https://github.com/public-edge/public-edge-manager/issues" rel="noopener">Roadmap</a><a class="button" href="https://github.com/public-edge/public-edge-manager/blob/main/research/MULTI_NODE_SIMULATION.md" rel="noopener">Simulation study</a></div>
+        </div>
+      </section>
+    </main>
+    <re8ch-footer locale="en" theme="light" language-options='[{"label":"English","value":"en","href":"../en/"},{"label":"简体中文","value":"zh-CN","href":"../zh-CN/"}]' language-mode="available" brand-logo="https://brand-assets.re8ch.com/SVG/logo.svg"></re8ch-footer>
+    </div>
+    <script type="application/json" id="site-copy">{"zone":"authoritative DNS","zoneFoot":"deterministic answers","regions":{"apac":"Asia Pacific","emea":"Europe","amer":"Americas"},"regionsShort":{"apac":"APAC","emea":"EU","amer":"AMER"},"clients":"client locality","states":{"healthy":"healthy","full":"at capacity","failing":"probe failing","unready":"gateway unready","expired":"hold expired"},"cycleHint":"Press to change its evidence","fallback":"nameserver fallback","excluded":"excluded","holding":"holding","lkg":"last known good, {s}s left","verdict":{"okTitle":"Every locality is served in region","ok":"Each client gets its own region’s highest-priority healthy edge.","holdTitle":"Holding the last known good answer","hold":"A short probe failure does not flip DNS. If the probe still fails when the hold ends, the edge is excluded.","crossTitle":"Failing over across regions","cross":"No eligible edge is left in a region, so its clients get the next healthy edge by priority.","changed":"Answer changed for: {list}."}}</script>
+    <script src="../edge.js?v=20261023-oss-1" defer></script>
+  </body>
+</html>
